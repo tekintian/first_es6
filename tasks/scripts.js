@@ -3,7 +3,7 @@
  * cnpm install yargs gulp gulp-if gulp-concat webpack webpack-stream vinyl-named gulp-livereload gulp-plumber gulp-rename gulp-uglify gulp-util --save-dev
 * @Author: Tekin
 * @Date:   2018-09-23 22:48:11
-* @Last Modified 2018-09-23
+* @Last Modified 2018-09-24
 */
 import gulp from 'gulp';
 import gulpif from 'gulp-if';
@@ -25,7 +25,7 @@ gulp.task('scripts',()=>{
       }
     }))
     .pipe(named())
-    //打包 错误处理
+    //打包 错误处理  新版的webpack与老版本的 代码有所区别，rules【loader】   babel-loader【babel】
     .pipe(gulpWebpack({
       module:{
         rules:[{
