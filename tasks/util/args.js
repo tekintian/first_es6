@@ -1,7 +1,8 @@
-/*
+/**
+ * 命令行工具包
 * @Author: Tekin
 * @Date:   2018-09-23 22:34:47
-* @Last Modified 2018-09-23 @Last Modified time: 2018-09-23 22:34:47
+* @Last Modified 2018-09-23
 */
 import yargs from 'yargs';
 

@@ -1,4 +1,5 @@
-/*
+/**
+ * 服务脚本
 * @Author: Tekin
 * @Date:   2018-09-23 23:06:40
 * @Last Modified 2018-09-23

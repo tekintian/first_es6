@@ -1,4 +1,5 @@
 /**
+ * scripts构建脚本
  * cnpm install yargs gulp gulp-if gulp-concat webpack webpack-stream vinyl-named gulp-livereload gulp-plumber gulp-rename gulp-uglify gulp-util --save-dev
 * @Author: Tekin
 * @Date:   2018-09-23 22:48:11
@@ -21,16 +22,15 @@ gulp.task('scripts',()=>{
   return gulp.src(['app/js/index.js'])
     .pipe(plumber({
       errorHandle:function(){
-
       }
     }))
     .pipe(named())
     //打包 错误处理
     .pipe(gulpWebpack({
       module:{
-        loaders:[{
+        rules:[{
           test:/\.js$/,
-          loader:'babel'
+          loader:'babel-loader'
         }]
       }
     }),null,(err,stats)=>{
