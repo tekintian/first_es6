@@ -49,26 +49,28 @@
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(2);
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports) {
 
 	'use strict';
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	{
+	    // #构造函数#
+	    var regex = new RegExp('xyz', 'i'); //第一个参数是字符串，第二个是修饰符
+	    var regex2 = new RegExp(/xyz/i); //第一个参数是正则表达式，不接受第二个参数，否则会报错
+	    console.log(regex.test('xyz123'), regex2.test('xyz123'));
+	    console.log(regex.test('xyZ123'), regex2.test('xyZ123'));
 
-	/**
-	* @Author: Tekin
-	* @Date:   2018-09-23 22:01:34
-	* @Last Modified 2018-09-24
-	*/
-	var Test = function Test() {
-	    _classCallCheck(this, Test);
-
-	    this.a = 'This is ES6 compile test SS';
-	};
-
-	var test = new Test();
-
-	document.getElementById('first_test').innerHTML = test.a;
+	    var regex3 = new RegExp(/abc/ig, 'i');
+	    console.log(regex3.flags); //原有正则对象的修饰符是ig，它会被第二个参数i覆盖
+	}
 
 /***/ })
 /******/ ]);
