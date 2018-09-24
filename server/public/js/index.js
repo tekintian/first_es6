@@ -55,10 +55,15 @@
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+	/**
+	* @Author: Tekin
+	* @Date:   2018-09-23 22:01:34
+	* @Last Modified 2018-09-24
+	*/
 	var Test = function Test() {
 	    _classCallCheck(this, Test);
 
-	    this.a = 'This is ES6 compile test';
+	    this.a = 'This is ES6 compile test SS';
 	};
 
 	var test = new Test();

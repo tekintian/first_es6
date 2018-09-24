@@ -1,5 +1,5 @@
 /**
- * 服务脚本
+ * server 服务构建脚本
 * @Author: Tekin
 * @Date:   2018-09-23 23:06:40
 * @Last Modified 2018-09-24
@@ -9,12 +9,12 @@ import gulpif from 'gulp-if';
 import liveserver from 'gulp-live-server';
 import args from './util/args';
 
-//cb 回调函数名称，可自定义
-gulp.task('serve',(cb)=>{
+// gulp.task('server' 这里的server为任务名称，需要和build.js里面的文件名一致  cb 回调函数  
+gulp.task('server',(cb)=>{
 	//判断是否处于监听状态，非监听转态直接返回回调函数
   if(!args.watch) return cb();
 
-// --harmony 表示在当前命令行下执行后面的server/bin/www脚本 [express工具自动创建的]
+// --harmony 表示在当前命令行下执行后面的server/bin/www 脚本 [express工具自动创建的]
   var server = liveserver.new(['--harmony','server/bin/www']);
   
   //启动服务器
