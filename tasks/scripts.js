@@ -28,9 +28,9 @@ gulp.task('scripts',()=>{
     //打包 错误处理  新版的webpack与老版本的 代码有所区别，rules【loader】   babel-loader【babel】
     .pipe(gulpWebpack({
       module:{
-        rules:[{
+        loaders:[{
           test:/\.js$/,
-          loader:'babel-loader'
+          loader:'babel'
         }]
       }
     }),null,(err,stats)=>{

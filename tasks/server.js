@@ -2,7 +2,7 @@
  * 服务脚本
 * @Author: Tekin
 * @Date:   2018-09-23 23:06:40
-* @Last Modified 2018-09-23
+* @Last Modified 2018-09-24
 */
 import gulp from 'gulp';
 import gulpif from 'gulp-if';
@@ -22,13 +22,11 @@ gulp.task('serve',(cb)=>{
 
 //热监听 gulp.watch 做文件监听 数组表示监听的文件路径
   gulp.watch(['server/public/**/*.js','server/views/**/*.ejs'],function(file){
-    //通知服务器处理
     server.notify.apply(server,[file]);
   })
 
-//监听需要重启服务的文件 路由和app.js启动入口文件
+//监听需要重启服务的文件 路由和app.js启动入口文件      //重启服务器
   gulp.watch(['server/routes/**/*.js','server/app.js'],function(){
-    //重启服务器
     server.start.bind(server)()
   });
 })

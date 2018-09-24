@@ -2,7 +2,7 @@
  * 命令行工具包
 * @Author: Tekin
 * @Date:   2018-09-23 22:34:47
-* @Last Modified 2018-09-23
+* @Last Modified 2018-09-24
 */
 import yargs from 'yargs';
 
@@ -13,7 +13,6 @@ const args = yargs
     default:false,
     describe:'min all scripts'
   })
-
   .option('watch',{
     boolean:true,
     default:false,
