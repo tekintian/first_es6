@@ -131,8 +131,22 @@ server/package.json
 }
 ~~~
 
+## tips
+babel-polyfill 处理ES6字符兼容的库
 
+app/js/index.js  此文件为gulp构建脚本的JS入口文件，所有的ES6文件都要经过此文件后才能被构建工具识别。另外本工具需要在需要有JS渲染的视图模板文件【app/views/*.ejs】里面载入本文件链接 如：
 
+~~~html
+<!-- 引入入口js文件 -->
+ <script src="/js/index.js" charset="utf-8"></script>
+ 
+~~~
+
+在app/js/index.js 文件里面引入其他js文件使用 import命令，如：引入 /class/lesson1.js 文件
+
+~~~js
+import './class/lesson6';
+~~~
 
 
 

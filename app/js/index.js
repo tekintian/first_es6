@@ -13,6 +13,11 @@ let test=new Test();
 document.getElementById('first_test').innerHTML=test.a
 */
 //引入 .js文件 地址相对当前目录
-import './class/lesson3';
 
+//解构赋值
+// import './class/lesson2';
 
+//正则
+// import './class/lesson3';
+// .... 
+import './class/lesson6';
