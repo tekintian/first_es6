@@ -21,10 +21,12 @@
     console.log('let of',key,value);
   }
 
+  //获取 Symbol的值
   Object.getOwnPropertySymbols(obj).forEach(function(item){
     console.log(obj[item]);
   })
 
+  //使用 reflect反射获取所有的值
   Reflect.ownKeys(obj).forEach(function(item){
     console.log('ownkeys',item,obj[item]);
   })

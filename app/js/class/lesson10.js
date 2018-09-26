@@ -1,8 +1,11 @@
+
+//size 返回的数量为非重复的长度
 {
   let list = new Set();
   list.add(5);
   list.add(7);
-
+  list.add(7);
+  list.add(8);
   console.log('size',list.size);
 }
 
@@ -27,6 +30,7 @@
   console.log('unique',list2);
 }
 
+//
 {
   let arr=['add','delete','clear','has'];
   let list=new Set(arr);
@@ -51,10 +55,12 @@
     console.log('entries',key,value);
   }
 
-  list.forEach(function(item){console.log(item);})
+  list.forEach(function(item){
+    console.log(item);
+  })
 }
 
-
+//WeakSet 只支持添加对象
 {
   let weakList=new WeakSet();
 
@@ -67,6 +73,7 @@
   console.log('weakList',weakList);
 }
 
+//map 的特定是键可以是任何数据类型
 {
   let map = new Map();
   let arr=['123'];
@@ -150,31 +157,37 @@
 {
   // map,set,object对比
   let item={t:1};
+  let ei={e:2}
   let map=new Map();
   let set=new Set();
   let obj={};
 
   // 增
   map.set('t',1);
+  map.set('e',2);
   set.add(item);
+  set.add(ei);
   obj['t']=1;
+  obj['e']=2;
 
-  console.info('map-set-obj',obj,map,set);
+
+  console.info('map-set-obj',obj,map,set);  // map-set-obj Object {t: 1, e: 2} Map(2) {"t" => 1, "e" => 2} Set(2) {Object {t: 1}, Object {e: 2}}
 
   // 查
   console.info({
     map_exist:map.has('t'),
     set_exist:set.has(item),
-    obj_exist:'t' in obj
+    obj_exist:'t' in obj,
+    obj_exist:'e' in obj
   })
 
-  // 改
+  // // 改
   map.set('t',2);
   item.t=2;
   obj['t']=2;
   console.info('map-set-obj-modify',obj,map,set);
 
-  // 删除
+  // // 删除
   map.delete('t');
   set.delete(item);
   delete obj['t'];

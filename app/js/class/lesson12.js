@@ -92,9 +92,13 @@
     }
   }
 
+  Parent.info='This is a static info';
+
+
   Parent.type='test';
 
   console.log('静态属性',Parent.type);
+  console.log('静态属性',Parent.info);
 
 
 }

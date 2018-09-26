@@ -1,7 +1,7 @@
 /**
 * @Author: Tekin
 * @Date:   2018-09-23 22:01:34
-* @Last Modified 2018-09-24
+* @Last Modified 2018-09-26
 */
 /*class Test{
     constructor(){
@@ -20,4 +20,20 @@ document.getElementById('first_test').innerHTML=test.a
 //正则
 // import './class/lesson3';
 // .... 
-import './class/lesson6';
+// import './class/lesson14';
+// 
+//  import 'babel-polyfill';
+// import './class/lesson15';
+// 
+// import {A,MyTest} from './class/lesson17';
+
+// let tt=new MyTest()
+// tt.test('中国测试','aaa','bbb');
+// 
+
+import mymod from './class/lesson17';
+
+mymod.test();
+mymod.aaa();
+
+

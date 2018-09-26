@@ -11,17 +11,29 @@
 // }
 
 let A=123;
-let test=function(){
-  console.log('test');
+function test(){
+  console.log('test')
 }
+
+let aaa=()=>{
+	console.log('arrow function');
+}
+
 class Hello{
   test(){
-    console.log('class');
+    console.log('class')
   }
+}
+class MyTest{
+	test(...arg){
+		console.log(arg)
+	}
 }
 
 export default {
   A,
+  aaa,
   test,
-  Hello
+  Hello,
+  MyTest
 }

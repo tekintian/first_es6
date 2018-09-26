@@ -58,7 +58,7 @@
 //   console.log(status.next());
 //   console.log(status.next());
 // }
-//
+
 
 {
   let draw=function(count){
@@ -72,15 +72,23 @@
       yield draw(count);
     }
   }
+ 
 
   let star=residue(5);
   let btn=document.createElement('button');
   btn.id='start';
-  btn.textContent='抽奖';
+  btn.textContent='开始抽奖';
   document.body.appendChild(btn);
   document.getElementById('start').addEventListener('click',function(){
     star.next();
-  },false)
+  },false);
+
+   let myDiv1=document.createElement('div');
+  myDiv1.id='mydiv1';
+  myDiv1.innerHTML='这个是我的DIV内容';
+  document.getElementById('first_test').appendChild(myDiv1);
+
+
 }
 
 {

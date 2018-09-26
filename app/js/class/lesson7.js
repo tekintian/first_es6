@@ -35,7 +35,18 @@
   console.log(arrow2());
 
 }
+//箭头函数 没有 绑定this， 如果需要使用this则不能使用箭头函数
+{
+  //v为参数
+  let arr = v => v*10;
+  console.log(arr(2));
+  let arr2 = () => {
+    return console.log(this); //undefined
+  };
+  arr2(); //undefined
+}
 
+//伪调用  的作用 提升性能； 函数嵌套的情况建议使用伪调用形式
 {
   function tail(x){
     console.log('tail',x);

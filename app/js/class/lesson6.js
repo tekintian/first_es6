@@ -50,12 +50,12 @@ import 'babel-polyfill'; //处理 let  of  values()兼容问题
   console.log([1,6,16,27,28].copyWithin(0,3,4)); //[27, 6, 16, 27, 28]
 }
 
-// {
-//   console.log([1,2,3,4,5,6].find(function(item){return item>3}));
-//   console.log([1,2,3,4,5,6].findIndex(function(item){return item>3}));
-// }
+{
+  console.log([1,2,3,4,5,6].find(function(item){return item>3}));
+  console.log([1,2,3,4,5,6].findIndex(function(item){return item>3}));
+}
 
-// {
-//   console.log('number',[1,2,NaN].includes(1));
-//   console.log('number',[1,2,NaN].includes(NaN));
-// }
+{
+  console.log('number',[1,2,NaN].includes(1));
+  console.log('number',[1,2,NaN].includes(NaN));
+}

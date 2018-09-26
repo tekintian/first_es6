@@ -2,25 +2,24 @@
   // 基本定义
   let ajax=function(callback){
     console.log('执行');
-    setTimeout(function () {
+    setTimeout(function(){
       callback&&callback.call()
     }, 1000);
   };
   ajax(function(){
-    console.log('timeout1');
+    console.log('timeout');
   })
 }
 
 {
   let ajax=function(){
-    console.log('执行2');
+    console.log('exec');
     return new Promise(function(resolve,reject){
-      setTimeout(function () {
-        resolve()
-      }, 1000);
+      setTimeout(function(){
+        resolve();
+      },1000)
     })
   };
-
   ajax().then(function(){
     console.log('promise','timeout2');
   })
@@ -72,6 +71,12 @@
   }).catch(function(err){
     console.log('catch',err);
   });
+
+  ajax(1).then(function(){
+    console.log('OK');
+  }).catch(function(e){
+    console.log('catch ', e);
+  });
 }
 
 {
@@ -96,9 +101,9 @@
   }
 
   Promise.all([
-    loadImg('http://i4.buimg.com/567571/df1ef0720bea6832.png'),
-    loadImg('http://i4.buimg.com/567751/2b07ee25b08930ba.png'),
-    loadImg('http://i2.muimg.com/567751/5eb8190d6b2a1c9c.png')
+    loadImg('http://cn.bing.com//az/hprichbg/rb/GiantSequoia_EN-US11110971924_1920x1080.jpg'),
+    loadImg('http://www.bing.com/az/hprichbg/rb/QinhuaiRiver_ZH-CN10131273425_1920x1080.jpg'),
+    loadImg('http://www.bing.com/az/hprichbg/rb/QinhuaiRiver_ZH-CN10131273425_1024x768.jpg')
   ]).then(showImgs)
 
 }
@@ -125,9 +130,9 @@
   }
 
   Promise.race([
-    loadImg('http://i4.buimg.com/567571/df1ef0720bea6832.png'),
-    loadImg('http://i4.buimg.com/567751/2b07ee25b08930ba.png'),
-    loadImg('http://i2.muimg.com/567751/5eb8190d6b2a1c9c.png')
+    loadImg('http://cn.bing.com//az/hprichbg/rb/GiantSequoia_EN-US11110971924_1920x1080.jpg'),
+    loadImg('http://www.bing.com/az/hprichbg/rb/QinhuaiRiver_ZH-CN10131273425_1920x1080.jpg'),
+    loadImg('http://www.bing.com/az/hprichbg/rb/QinhuaiRiver_ZH-CN10131273425_1024x768.jpg')
   ]).then(showImgs)
 
 }

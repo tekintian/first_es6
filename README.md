@@ -148,8 +148,14 @@ app/js/index.js  此文件为gulp构建脚本的JS入口文件，所有的ES6文
 import './class/lesson6';
 ~~~
 
+~~~babelrc
+{
+  "presets":["es2015"],
+  "plugins":["transform-decorators-legacy"]
+}
+~~~
 
-
+"plugins":["transform-decorators-legacy"] 这个是使用修饰符@ 所使用的插件
 
 
 
