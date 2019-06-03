@@ -1,5 +1,7 @@
 #  ES6 构建工具，ES6 gulp, webpack, babel 学习笔记
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tekintian/first_es6.svg)](https://greenkeeper.io/)
+
 
 
 本项目为学习ES6 的练手项目，需要安装的环境依赖为：
